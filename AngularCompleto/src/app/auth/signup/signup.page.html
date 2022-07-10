@@ -1,0 +1,68 @@
+<mat-card>
+  <mat-label><h1 >Signup Page</h1></mat-label>
+  <form #f="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field class="example-form" appearance="legacy">
+        <mat-label>Firstname</mat-label>
+        <input
+          matInput
+          type="text"
+          ngModel
+          name="firstname"
+          id="firstname"
+          placeholder="Inserisci il nome"
+        />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="example-form" appearance="legacy">
+        <mat-label>Lastname</mat-label>
+        <input
+          matInput
+          type="text"
+          ngModel
+          name="lastname"
+          id="lastname"
+          placeholder="Inserisci il cognome"
+        />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="example-form" appearance="legacy">
+        <mat-label>Inserisci Email</mat-label>
+        <input
+          matInput
+          type="email"
+          ngModel
+          name="email"
+          id="email"
+          placeholder="example@example.com"
+        />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="example-form" appearance="legacy">
+        <mat-label>Inserisci Password</mat-label>
+        <input
+          matInput
+          type="password"
+          class="example-full-width"
+          ngModel
+          name="password"
+          id="password"
+          placeholder="123abc!@"
+        />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <button type="submit" mat-raised-button color="primary">Registrati</button>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="error">{{error}}</div>
+  </form>
+</mat-card>
+
